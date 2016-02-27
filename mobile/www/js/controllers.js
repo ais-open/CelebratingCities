@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {
+.controller('DashCtrl', function($scope, Geocoder) {
   var vm = this;
 
   vm.startAt = "";
@@ -15,11 +15,13 @@ angular.module('starter.controllers', [])
             $scope.$apply(function () {
               vm[end + "At"] = String(latLong);    
             });
-            /*searchLatLong([position.coords.latitude, position.coords.longitude])
-                .then(displayResult,
+            Geocoder.getAddress([position.coords.latitude, position.coords.longitude])
+                .then(function (address) {
+                  vm[end + "At"] = String(address);
+                },
                 function () {
-                    $("<a>").attr("href", "#notFoundModal").attr("data-toggle", "modal").click();
-                });*/
+                  console.warn("Could not find address for location");
+                });
         },
         function (error) { console.error(error); },
         {
