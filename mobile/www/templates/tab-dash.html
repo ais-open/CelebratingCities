@@ -1,0 +1,11 @@
+<ion-view view-title="Dashboard" ng-controller="DashCtrl as vm">
+  <ion-content class="padding">
+    <h2>Hubs</h2>
+    <form>
+      <h3>Start from:</h3>
+      <input type="text" name="vm.startAt" size="40" ng-model="vm.startAt"/><button class="geolocate" ng-click="vm.geolocate('start')"><span class="ion-icon ion-android-pin"></span></button>
+      <h3>Going to:</h3>
+      <input type="text" name="vm.arriveAt" ng-model="vm.arriveAt"/><button class="geolocate" ng-click="vm.geolocate('arrive')"><span class="ion-icon ion-android-pin"></span></button>
+    </form>
+  </ion-content>
+</ion-view>

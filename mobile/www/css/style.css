@@ -1,0 +1,30 @@
+/* Empty. Add your own CSS if you like */
+input[type=text] {
+	border: 1px solid #999;
+	font-size: 18px;
+	border-radius: 3px 0 0 3px;
+	width: 400px;
+	padding: 4px 8px 4px 8px;
+	display: inline;
+	height: 40px;
+	padding-right: 40px;
+	text-transform: uppercase;
+}
+
+button[class=geolocate], button[class=geolocate].activated {
+	display: inline;
+    margin-left: 0;
+    height: 25px;
+    width: 50px;
+    background: royalblue;
+    color: white;
+	border: 1px solid #999;
+	border-radius: 0 3px 3px 0;
+	float: right;
+	height: 40px;
+	margin-top: -40px;
+	z-index: 999;
+}
+button span.ion-icon {	
+	font-size: 24px;
+}
