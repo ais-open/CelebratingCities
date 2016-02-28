@@ -1,4 +1,36 @@
 <ion-view view-title="Account" class="content-main">
   <ion-content>
+    <form ng-submit="vm.search()">
+
+    	<div class="form-group vertical">
+	      <label for="startFrom">HUB Pickup:</label>
+      	<div class="input-group">
+		      <input type="text" name="startAt" size="40" ng-model="search.startAt"/>
+		      <button type="button" class="geolocate" ng-click="geolocate('start')"><span class="ion-icon ion-android-pin"></span></button>
+		    </div>
+	    </div>
+
+  		<div class="form-group vertical">
+  	      <label for="goingTo">HUB Drop Off:</label>
+        	<div class="input-group">
+  		      <input type="text" name="arriveAt" ng-model="search.arriveAt"/>
+  		      <button type="button" class="geolocate" ng-click="geolocate('arrive')"><span class="ion-icon ion-android-pin"></span></button>
+  		    </div>
+       </div>
+
+       <div class="form-group vertical">
+  	      <label for="startFrom">Ride Date:</label>
+        	<div class="input-group">
+  		      <input type="text" name="travelDate" size="40" ng-model="search.travelDate"/>
+  		    </div>
+       </div>
+
+      <ion-toggle  ng-model="scheduleRide">
+        Recurring
+      </ion-toggle>
+
+
+
+    </form>
   </ion-content>
 </ion-view>
