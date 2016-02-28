@@ -2,14 +2,7 @@
 
 This application is designed to help low-income residents, in underserved areas, find access to affordable transportation. RideHUB will simultaneously provide the DOT, along with state and local governments, data that can help determine where public transit options are most needed.
 
-![Screenshots1](/src/Screenshots/ridehub-ss-home.jpg)
-
-![Screenshots2](/src/Screenshots/ridehub-ss-hublist.jpg)
-
-![Screenshots3](/src/Screenshots/ridehub-ss-hubdetail.jpg)
-
-
-## Challenge and Approach
+**Challenge and Approach**
 
 Our submission is for both Problem Set 1 – Challenge 1 (Tom's vignette): Catalyze neighborhood revitalization in underserved areas, and Problem Set 2 – Challenge 2 (Janice's vignette): serving last-mile mobility. To satisfy this approach we:
 
@@ -20,19 +13,19 @@ Our submission is for both Problem Set 1 – Challenge 1 (Tom's vignette): Catal
 
 We are presenting this app, along with suggestions for possible use cases, to Uber and DOT.
 
-## Team Members
+**Team Members**
 
 Our team is comprised of:
 
 - [@simplyshang](https://github.com/simplyshang) – Chief Ideator
 - [@maxnorth](https://github.com/maxnorth) – Master Swordsman
-- [@dmoney](https://www.linkedin.com/in/drenee123) – Cat Wrangler (ReadMe.md Author)
+- [@dmoney](https://www.linkedin.com/in/drenee123) – Cat Wrangler
 - [@cillay](https://github.com/cillay) – Mad Hacker
 - [@artieroggeband](https://github.com/artieroggeband) – ArtieD2, the Data Dude
 - [@jmmcnj](https://github.com/jmmcnj) – Uber Parker
 - [@cpettway](https://www.linkedin.com/in/cpettway) – Plate Spinner
 
-## Technologies, APIs, and Datasets Utilized
+**Technologies, APIs, and Datasets Utilized**
 
 We made use of:
 
@@ -43,11 +36,6 @@ We made use of:
 - Baltimore Transit Data Sets
 - Uber API
 
-## Contributing
+**Contributing**
 
 In order to build and run our app:
-1. Install node
-2. In the console, changer directory to “src/mobile” and run “npm install” from there
-3. When install completes, run “npm install http-server –g”
-4. Change directory to “src/mobile/www” and run “http-server”
-5. Navigate to the host indicated by the output (typically localhost:8080) to view the app
