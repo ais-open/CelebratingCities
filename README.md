@@ -47,5 +47,5 @@ In order to build and run our app:
 1. Install node  
 2. In the console, changer directory to “src/mobile” and run “npm install” from there  
 3. When install completes, run “npm install http-server –g”  
-4. Change directory to “src/mobile/www” and run “http-server”
+4. Change directory to “src/mobile/www” and run “http-server”  
 5. Navigate to the host indicated by the output (typically localhost:8080) to view the app  
