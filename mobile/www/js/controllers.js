@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, Geocoder, hubSearch) {
+.controller('DashCtrl', function($scope, $state, Geocoder, hubSearch) {
   var vm = this;
 
     vm.search = {
@@ -46,6 +46,10 @@ angular.module('starter.controllers', [])
             maximumAge: 10000
         });
     }
+  };
+
+  vm.showList = function () {
+    $state.go("tab.chats");
   };
 
   /* window.setTimeout(function () {
