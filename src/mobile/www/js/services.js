@@ -9,9 +9,9 @@ angular.module('starter.services', [])
     name: 'Giant Food on 33rd',
     address: '601 E 33rd Street',
     distance: 0.3,
-    duration: 16,
+    duration: 6,
     leaveTime: '7:06am',
-    arriveTime: '7:22am',
+    arriveTime: '7:12am',
     endPoint: 'West Balitmore (MARC)'
   },{
     id: 1,

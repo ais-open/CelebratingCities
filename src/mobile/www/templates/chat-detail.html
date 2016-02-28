@@ -5,16 +5,17 @@
   The Friends service returns an array of friend data
 -->
 <ion-view view-title="{{chat.name}}">
-  <ion-content class="padding" style="text-align: center">
+  <ion-content class="hub-list-item">
     <div style="max-height: 140px; overflow: hidden">
-      <img src="img/hub0.png" style="width: 360px; height: 180px">
+      <img src="img/hub0.png">
     </div>
-    <h3 style="margin-bottom: 0">
-      {{chat.name}}
-    </h3>
-    <p>
-      {{chat.address}}
-    </p>
-    <img src="img/map0.png" style="width: 360px; height: 360px">
+    <h3 class="page-title" style="margin-top:0;">{{chat.name}}</h3>
+    <p>Start Point: <strong>{{chat.address}}</strong></p>
+    <p>End Point: <strong>{{chat.endPoint}}</strong></p>
+    <p>Leave at: <strong>{{chat.leaveTime}}</strong></p>
+    <p>Arrive by: <strong>{{chat.arriveTime}}</strong></p>
+    <p>Ride duration: <strong>{{chat.duration}} minutes</strong></p>
+    <p>Distance: <strong>{{chat.distance}} miles</strong></p>
+    <img src="img/map0.png">
   </ion-content>
 </ion-view>

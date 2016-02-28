@@ -5,9 +5,9 @@
 	margin-top: 5px;
 }
 
-.pane {
+/* .pane {
 	background: #1d093d;
-}
+} */
 
 .content-main {
 	background: #1d093d url(../img/background.png) bottom center no-repeat;
@@ -151,4 +151,32 @@ button span.ion-icon {
 
 .pane h3 {
 	color: #fff;
+}
+
+.hub-list-item h3,
+.hub-list-item p {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.hub-list-item h3 {
+	margin-bottom: 10px;
+}
+
+.hub-list-item p {
+	margin-bottom: 7px;
+}
+
+.hub-list-item p:first-of-type {
+	margin-top: 20px;
+}
+
+.hub-list-item p:last-of-type {
+	margin-bottom: 20px;
+}
+
+.hub-list-item img {
+	max-width: 100%;
+	height: auto;
+	display: block;
 }
