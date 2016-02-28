@@ -180,3 +180,12 @@ button span.ion-icon {
 	height: auto;
 	display: block;
 }
+
+.item-select select {
+	background: #eee;
+	direction: rtl;
+}
+
+.item-select option {
+	direction: rtl;
+}
