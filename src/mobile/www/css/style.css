@@ -10,7 +10,7 @@
 }
 
 .content-main {
-	background: url(../img/background.png) bottom center no-repeat;
+	background: #1d093d url(../img/background.png) bottom center no-repeat;
 	background-size: cover;
 }
 
@@ -31,6 +31,14 @@
     margin-bottom: 0;
     font-size: 18px;
     letter-spacing: 0.038em;
+}
+
+.item-toggle {
+	margin: 25px 0;
+	background: #680148;
+	color: white;
+	border-radius: 3px;
+	border-color: #4f0137;
 }
 
 /*Forms*/
