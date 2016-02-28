@@ -29,7 +29,7 @@ Our team is comprised of:
 - [@dmoney](https://www.linkedin.com/in/drenee123) – Cat Wrangler (ReadMe.md Author)
 - [@cillay](https://github.com/cillay) – Mad Hacker
 - [@artieroggeband](https://github.com/artieroggeband) – ArtieD2, the Data Dude
-- [@jmmcnj](https://github.com/jmmcnj) – Uber Parker
+- [@jmmcnj](https://github.com/jmmcnj) – Still trying to find parking
 - [@cpettway](https://www.linkedin.com/in/cpettway) – Plate Spinner
 
 ## Technologies, APIs, and Datasets Utilized
@@ -38,14 +38,12 @@ We made use of:
 
 - Local Affordability Index (LAI)
 - US Census Bureau
-- MD iMap Data Portal
-- City SDK
 - Baltimore Transit Data Sets
 - Uber API
 
 ## Contributing
 
-In order to build and run our app:
+In order to build and run our app:  
 1. Install node  
 2. In the console, changer directory to “src/mobile” and run “npm install” from there  
 3. When install completes, run “npm install http-server –g”  
