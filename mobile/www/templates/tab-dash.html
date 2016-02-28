@@ -8,8 +8,24 @@
       <h3>Going to:</h3>
       <input type="text" name="arriveAt" required ng-model="vm.arriveAt"/><button class="geolocate" ng-click="vm.geolocate('arrive')"><span class="ion-icon ion-android-pin"></span></button>
       <br>
-      <h3>Leaving at:</h3>
-      <input type="text" data-ng-model='vm.startTime' data-lng-clockpicker data-lng-clockpicker-options='vm.timeOptions'></input>
+      <div>
+        <h3>Ride Date:</h3>
+        <input type="text" data-ng-model='vm.travelDate'></input>
+      </div>
+      <div>
+        <h3>Earliest Time:</h3>
+        <input type="text" data-ng-model='vm.earliestArrival' data-lng-clockpicker data-lng-clockpicker-options='vm.timeOptions'></input>
+      </div>
+      <div>
+        <h3>Latest Time:</h3>
+        <input type="text" data-ng-model='vm.latestArrival' data-lng-clockpicker data-lng-clockpicker-options='vm.timeOptions'></input>
+      </div>
+      <div>
+        <select>
+          <option>Arrive</option>
+          <option>Leave</option>
+        </select>
+      </div>
       <br>
       <br>
       <br>
