@@ -35,7 +35,7 @@
                 });
                 Geocoder.getAddress([position.coords.latitude, position.coords.longitude])
                     .then(function (address) {
-                      vm[end + "At"] = String(address);
+                      vm.search[end + "At"] = String(address);
                     },
                     function () {
                       console.warn("Could not find address for location");
