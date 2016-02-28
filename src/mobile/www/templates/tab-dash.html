@@ -1,7 +1,7 @@
 <ion-view view-title="Dashboard" ng-controller="DashCtrl as vm" class="content-main">
 
   <ion-content >
-    <form ng-submit="vm.findHubs()" >
+    <form ng-submit="vm.search()" >
     	<div class="form-group vertical">
 	      <label for="startFrom">Start From:</label>
       	<div class="input-group">
@@ -52,7 +52,7 @@
           <input type="text" name="latestArrival" size="40" ng-model="vm.search.latestArrival"/>
         </div>
       </div>
-      <ion-toggle  ng-model="vm.search.recurring">
+      <ion-toggle  ng-model="vm.serch.recurring">
           Recurring
       </ion-toggle>
     </div>

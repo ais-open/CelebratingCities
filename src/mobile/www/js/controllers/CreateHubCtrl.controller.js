@@ -1,22 +1,33 @@
 (function() {
 
 angular.module("starter")
-  .controller('AccountCtrl', CreateHUBCtrl);
+  .controller('AccountCtrl', AccountCtrl);
 
   CreateHUBCtrl.$inject = ["$scope", "Geocoder", "hubSearch", "$location"];
 
-  function CreateHUBCtrl($scope, Geocoder, hubSearch, $location) {
+  function AccountCtrl($scope, Geocoder, hubSearch, $location) {
     var vm = $scope;
 
-    vm.search = hubSearch.getData();
+    vm.search = {
+      startAt: "",
+      arriveAt: "",
+      latestTime: "",
+      earliestTime: "",
+      timingType: "",
+      travelDate: "",
+      recurring: "",
+    };
 
     vm.scheduleRide = false;
 
     vm.processing = false;
 
-    $scope.$watch(hubSearch.getData, function(newSearchData){
-      vm.search = newSearchData;
-    });
+    vm.search = function() {
+      hubSearch.setData(vm.search)
+      .then(function() {
+        $location.path("tab/dash/results");
+      });
+    };
 
     vm.geolocate = function (end) {
       if (navigator && navigator.geolocation && navigator.geolocation.getCurrentPosition) {

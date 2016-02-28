@@ -17,8 +17,8 @@
 
         vm.processing = false;
 
-        vm.findHubs = function() {
-          hubSearch.setData(angular.copy(vm.search))
+        vm.search = function() {
+          hubSearch.setData(vm.search)
           .then(function() {
             $location.path("tab/dash/results");
           });
