@@ -107,6 +107,10 @@ button span.ion-icon {
 	color: white;
 }
 
+.rh-button.activated {
+	background-color: #5da1a3;
+}
+
 /*Tabs Color*/
 .tabs-color-rh a {
 	color: #1d093d;
