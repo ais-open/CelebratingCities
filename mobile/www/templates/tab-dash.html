@@ -1,11 +1,21 @@
 <ion-view view-title="Dashboard" ng-controller="DashCtrl as vm">
   <ion-content class="padding">
     <h2>Hubs</h2>
-    <form>
+    <form id="form-start">
       <h3>Start from:</h3>
-      <input type="text" name="vm.startAt" size="40" ng-model="vm.startAt"/><button class="geolocate" ng-click="vm.geolocate('start')"><span class="ion-icon ion-android-pin"></span></button>
+      <input type="text" name="startAt" size="40" ng-model="vm.startAt"/><button class="geolocate" ng-click="vm.geolocate('start')"><span class="ion-icon ion-android-pin"></span></button>
+      <br>
       <h3>Going to:</h3>
-      <input type="text" name="vm.arriveAt" ng-model="vm.arriveAt"/><button class="geolocate" ng-click="vm.geolocate('arrive')"><span class="ion-icon ion-android-pin"></span></button>
+      <input type="text" name="arriveAt" ng-model="vm.arriveAt"/><button class="geolocate" ng-click="vm.geolocate('arrive')"><span class="ion-icon ion-android-pin"></span></button>
+      <br>
+      <h3>Leaving at:</h3>
+      <input type="text" data-ng-model='vm.startTime' data-lng-clockpicker data-lng-clockpicker-options='vm.timeOptions'></input>
+      <br>
+      <br>
+      <br>
+      <button class="button button-balanced">
+		  Go
+		</button>
     </form>
   </ion-content>
 </ion-view>

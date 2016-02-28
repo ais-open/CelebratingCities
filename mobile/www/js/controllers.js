@@ -32,7 +32,18 @@ angular.module('starter.controllers', [])
     }
   };
 
-
+  /* window.setTimeout(function () {
+    var input = $(document.querySelector('input[name$=Time]'));
+    input.on('mousedown touchstart', function () { 
+      input.clockpicker('show');
+    })
+    .clockpicker({
+      autoclose: false,
+      donetext: 'set',
+      twelvehour: true,
+      placement: "top"
+    });
+  }, 600); */
 })
 
 .controller('ChatsCtrl', function($scope, Chats) {

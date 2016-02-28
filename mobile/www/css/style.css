@@ -1,4 +1,4 @@
-/* Empty. Add your own CSS if you like */
+
 input[type=text] {
 	border: 1px solid #999;
 	font-size: 18px;
@@ -11,6 +11,10 @@ input[type=text] {
 	text-transform: uppercase;
 }
 
+form#form-start input[type=text] {
+	float: left;
+}
+
 button[class=geolocate], button[class=geolocate].activated {
 	display: inline;
     margin-left: 0;
@@ -20,11 +24,28 @@ button[class=geolocate], button[class=geolocate].activated {
     color: white;
 	border: 1px solid #999;
 	border-radius: 0 3px 3px 0;
-	float: right;
+	float: left;
 	height: 40px;
 	margin-top: -40px;
 	z-index: 999;
 }
 button span.ion-icon {	
 	font-size: 24px;
+}
+
+.hub-list {
+	display: relative;
+}
+.hub-list h1 {
+	position: absolute;
+	width: 56px;
+	height: 56px;
+	background-color: royalblue;
+	border-radius: 28px;
+	margin-left: -64px;
+	margin-top: -8px;
+	text-align: center;
+	color: white;
+	font-size: 28px;
+	padding-top: 10px;
 }
