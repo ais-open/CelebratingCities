@@ -4,7 +4,7 @@
     <ion-list class="hub-list">
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/dash/results/{{chat.id}}">
         <div class="badge">
-          <span>{{chat.duration}}</span>
+          <span>{{chat.duration}} <p>mins</p></span>
         </div>
         <h2>{{chat.name}}</h2>
         <p>{{chat.address}}</p>
