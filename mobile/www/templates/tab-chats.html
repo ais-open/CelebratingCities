@@ -3,12 +3,13 @@
   <h3 class="page-title">Available Hubs</h3>
     <ion-list class="hub-list">
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/dash/results/{{chat.id}}">
-        <div class="badge">{{chat.distance}}</div>
+        <div class="badge">
+          <span>{{chat.duration}}</span>
+        </div>
         <h2>{{chat.name}}</h2>
         <p>{{chat.address}}</p>
         <p>To: <strong>{{chat.endPoint}}</strong></p>
-        <p>Arrival: <strong>{{chat.arriveTime}}</strong></p>
-        <p>Ride time: <strong>{{chat.duration}}</strong></p>
+        <p>Ride: <strong>{{chat.leaveTime}}</strong> - <strong>{{chat.arriveTime}}</strong></p>
         <i class="icon ion-chevron-right icon-accessory"></i>
 
         <ion-option-button class="button-assertive" ng-click="remove(chat)">

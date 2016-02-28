@@ -9,7 +9,8 @@ angular.module('starter.services', [])
     name: 'Giant Food on 33rd',
     address: '601 E 33rd Street',
     distance: 0.3,
-    duration: '16 minutes',
+    duration: 16,
+    leaveTime: '7:06am',
     arriveTime: '7:22am',
     endPoint: 'Marc Station West'
   },{
@@ -17,7 +18,8 @@ angular.module('starter.services', [])
     name: '7-11 in Lucille Park',
     address: '5129 Reisterstown Rd',
     distance: 0.6,
-    duration: '9 minutes',
+    duration: 9,
+    leaveTime: '7:20am',
     arriveTime: '7:29am',
     endPoint: 'Marc Station West'
   },{
@@ -25,7 +27,8 @@ angular.module('starter.services', [])
     name: 'ALDI East Arlington',
     address: '3601 W Cold Spring Ln',
     distance: 1.1,
-    duration: '12 minutes',
+    duration: 12,
+    leaveTime: '7:01am',
     arriveTime: '7:13am',
     endPoint: 'Marc Station West'
   }, ];
