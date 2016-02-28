@@ -20,7 +20,7 @@
         vm.search = function() {
           hubSearch.setData(vm.search)
           .then(function() {
-            $location.path("tab/chats");
+            $location.path("tab/dash/results");
           });
         };
 
