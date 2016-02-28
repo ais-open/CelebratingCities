@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, Geocoder) {
+.controller('DashCtrl', function($scope, $state, Geocoder) {
   var vm = this;
 
   vm.startAt = "";
@@ -30,6 +30,10 @@ angular.module('starter.controllers', [])
             maximumAge: 10000
         });
     }
+  };
+
+  vm.showList = function () {
+    $state.go("tab.chats");
   };
 
   /* window.setTimeout(function () {
