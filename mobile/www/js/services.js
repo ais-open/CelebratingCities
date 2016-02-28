@@ -6,30 +6,20 @@ angular.module('starter.services', [])
   // Some fake testing data
   var chats = [{
     id: 0,
-    name: 'Ben Sparrow',
-    lastText: 'You on your way?',
-    face: 'img/ben.png'
-  }, {
+    name: 'Giant Food on 33rd',
+    address: '601 E 33rd Street',
+    distance: 0.3
+  },{
     id: 1,
-    name: 'Max Lynx',
-    lastText: 'Hey, it\'s me',
-    face: 'img/max.png'
-  }, {
+    name: '7-11 in Lucille Park',
+    address: '5129 Reisterstown Rd',
+    distance: 0.6
+  },{
     id: 2,
-    name: 'Adam Bradleyson',
-    lastText: 'I should buy a boat',
-    face: 'img/adam.jpg'
-  }, {
-    id: 3,
-    name: 'Perry Governor',
-    lastText: 'Look at my mukluks!',
-    face: 'img/perry.png'
-  }, {
-    id: 4,
-    name: 'Mike Harrington',
-    lastText: 'This is wicked good ice cream.',
-    face: 'img/mike.png'
-  }];
+    name: 'ALDI East Arlington',
+    address: '3601 W Cold Spring Ln',
+    distance: 1.1
+  }, ];
 
   return {
     all: function() {

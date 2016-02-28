@@ -1,10 +1,26 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, Geocoder) {
+.controller('DashCtrl', function($scope, Geocoder, hubSearch) {
   var vm = this;
 
-  vm.startAt = "";
-  vm.arriveAt = "";
+    vm.search = {
+      startAt: "",
+      arriveAt: "",
+      latestTime: "",
+      earliestTime: "",
+      timingType: "",
+      travelDate: "",
+      recurring: ""
+    };
+
+    vm.processing = false;
+
+    vm.search = function() {
+      hubSearch.setData(vm.search)
+      .then(function() {
+        $location;
+      })
+    };
 
   vm.geolocate = function (end) {
     if (navigator && navigator.geolocation && navigator.geolocation.getCurrentPosition) {
@@ -13,7 +29,7 @@ angular.module('starter.controllers', [])
                 return Number(coord).toFixed(5);
             }).toString().replace(",", ", ");
             $scope.$apply(function () {
-              vm[end + "At"] = String(latLong);    
+              vm[end + "At"] = String(latLong);
             });
             Geocoder.getAddress([position.coords.latitude, position.coords.longitude])
                 .then(function (address) {
@@ -32,7 +48,18 @@ angular.module('starter.controllers', [])
     }
   };
 
-
+  /* window.setTimeout(function () {
+    var input = $(document.querySelector('input[name$=Time]'));
+    input.on('mousedown touchstart', function () {
+      input.clockpicker('show');
+    })
+    .clockpicker({
+      autoclose: false,
+      donetext: 'set',
+      twelvehour: true,
+      placement: "top"
+    });
+  }, 600); */
 })
 
 .controller('ChatsCtrl', function($scope, Chats) {

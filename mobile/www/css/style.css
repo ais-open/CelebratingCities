@@ -67,6 +67,10 @@ button.geolocate.activated {
 	z-index: 10;
 }
 
+form#form-start input[type=text] {
+	float: left;
+}
+
 button span.ion-icon {	
 	font-size: 24px;
 }
@@ -90,4 +94,22 @@ button span.ion-icon {
 .tabs {
 	height: auto;
 	padding: 10px 0;
+}
+
+.hub-list {
+	display: relative;
+}
+
+.hub-list h1 {
+	position: absolute;
+	width: 56px;
+	height: 56px;
+	background-color: royalblue;
+	border-radius: 28px;
+	margin-left: -64px;
+	margin-top: -8px;
+	text-align: center;
+	color: white;
+	font-size: 28px;
+	padding-top: 10px;
 }
