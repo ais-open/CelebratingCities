@@ -20,6 +20,20 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+
+    // For Simulator, ensure correct platform-specific class names
+    window.setTimeout(function() {
+        if (document.body.classList.contains("platform-android")) {
+            _.forEach(_.filter(document.body.classList, function(className) {
+                return className.indexOf("-android") !== -1;
+            }), function (className) {
+                document.body.classList.remove(className);
+            });
+            _.forEach(["platform-ios", "platform-ios9", "platform-ios9_1"], function (className) {
+                document.body.classList.add(className);
+            });
+        }
+    }, 0);
   });
 })
 

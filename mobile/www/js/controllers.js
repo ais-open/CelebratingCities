@@ -29,11 +29,11 @@ angular.module('starter.controllers', [])
                 return Number(coord).toFixed(5);
             }).toString().replace(",", ", ");
             $scope.$apply(function () {
-              vm[end + "At"] = String(latLong);
+              vm.search[end + "At"] = String(latLong);
             });
             Geocoder.getAddress([position.coords.latitude, position.coords.longitude])
                 .then(function (address) {
-                  vm[end + "At"] = String(address);
+                  vm.search[end + "At"] = String(address);
                 },
                 function () {
                   console.warn("Could not find address for location");
