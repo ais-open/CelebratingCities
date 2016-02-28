@@ -1,4 +1,4 @@
-# Celebrating Cities – Hack the Last Mile: RideHUB ![RideHUB](/src/mobile/www/img/logo-ridehub.png)
+# Celebrating Cities – Hack the Last Mile: ![RideHUB](/src/mobile/www/img/logo-ridehub.png)
 
 This application is designed to help low-income residents, in underserved areas, find access to affordable transportation. RideHUB will simultaneously provide the DOT, along with state and local governments, data that can help determine where public transit options are most needed.
 
