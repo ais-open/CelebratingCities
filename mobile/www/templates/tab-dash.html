@@ -17,9 +17,9 @@
 		      <button type="button" class="geolocate" ng-click="vm.geolocate('arrive')"><span class="ion-icon ion-android-pin"></span></button>
 		    </div>
 	     </div>
-       <div class="form-group vertical">
-        <label for="startFrom">Schedule Ride: <input type="checkbox" name="recurring" size="40" ng-model="vm.scheduleRide"/></label>
-      </div>
+       <ion-toggle  ng-model="vm.scheduleRide">
+           Schedule Ride
+       </ion-toggle>
       <div ng-show="vm.scheduleRide">
        <div class="form-group vertical">
    	      <label for="startFrom">Ride Date:</label>
