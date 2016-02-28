@@ -1,72 +1,72 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, $state, Geocoder, hubSearch) {
-  var vm = this;
+// .controller('DashCtrl', function($scope, $state, Geocoder, hubSearch) {
+//   var vm = this;
+//
+//     vm.search = {
+//       startAt: "",
+//       arriveAt: "",
+//       latestTime: "",
+//       earliestTime: "",
+//       timingType: "",
+//       travelDate: "",
+//       recurring: ""
+//     };
+//
+//     vm.processing = false;
+//
+//     vm.search = function() {
+//       hubSearch.setData(vm.search)
+//       .then(function() {
+//         $location;
+//       })
+//     };
+//
+//   vm.geolocate = function (end) {
+//     if (navigator && navigator.geolocation && navigator.geolocation.getCurrentPosition) {
+//         navigator.geolocation.getCurrentPosition(function(position) {
+//             var latLong = [position.coords.latitude, position.coords.longitude].map(function (coord) {
+//                 return Number(coord).toFixed(5);
+//             }).toString().replace(",", ", ");
+//             $scope.$apply(function () {
+//               vm.search[end + "At"] = String(latLong);
+//             });
+//             Geocoder.getAddress([position.coords.latitude, position.coords.longitude])
+//                 .then(function (address) {
+//                   vm.search[end + "At"] = String(address);
+//                 },
+//                 function () {
+//                   console.warn("Could not find address for location");
+//                 });
+//         },
+//         function (error) { console.error(error); },
+//         {
+//             timeout: 15000,
+//             enableHighAccuracy: true,
+//             maximumAge: 10000
+//         });
+//     }
+//   };
+//
+//   vm.showList = function () {
+//     $state.go("tab.chats");
+//   };
+//
+//   /* window.setTimeout(function () {
+//     var input = $(document.querySelector('input[name$=Time]'));
+//     input.on('mousedown touchstart', function () {
+//       input.clockpicker('show');
+//     })
+//     .clockpicker({
+//       autoclose: false,
+//       donetext: 'set',
+//       twelvehour: true,
+//       placement: "top"
+//     });
+//   }, 600); */
+// })
 
-    vm.search = {
-      startAt: "",
-      arriveAt: "",
-      latestTime: "",
-      earliestTime: "",
-      timingType: "",
-      travelDate: "",
-      recurring: ""
-    };
-
-    vm.processing = false;
-
-    vm.search = function() {
-      hubSearch.setData(vm.search)
-      .then(function() {
-        $location;
-      })
-    };
-
-  vm.geolocate = function (end) {
-    if (navigator && navigator.geolocation && navigator.geolocation.getCurrentPosition) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-            var latLong = [position.coords.latitude, position.coords.longitude].map(function (coord) {
-                return Number(coord).toFixed(5);
-            }).toString().replace(",", ", ");
-            $scope.$apply(function () {
-              vm.search[end + "At"] = String(latLong);
-            });
-            Geocoder.getAddress([position.coords.latitude, position.coords.longitude])
-                .then(function (address) {
-                  vm.search[end + "At"] = String(address);
-                },
-                function () {
-                  console.warn("Could not find address for location");
-                });
-        },
-        function (error) { console.error(error); },
-        {
-            timeout: 15000,
-            enableHighAccuracy: true,
-            maximumAge: 10000
-        });
-    }
-  };
-
-  vm.showList = function () {
-    $state.go("tab.chats");
-  };
-
-  /* window.setTimeout(function () {
-    var input = $(document.querySelector('input[name$=Time]'));
-    input.on('mousedown touchstart', function () {
-      input.clockpicker('show');
-    })
-    .clockpicker({
-      autoclose: false,
-      donetext: 'set',
-      twelvehour: true,
-      placement: "top"
-    });
-  }, 600); */
-})
-
-.controller('ChatsCtrl', function($scope, Chats) {
+.controller('ChatsCtrl', function($scope, Chats, $location) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -79,6 +79,9 @@ angular.module('starter.controllers', [])
   $scope.remove = function(chat) {
     Chats.remove(chat);
   };
+  $scope.createHub = function(){
+    $location.path("tab/account");
+  }
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {

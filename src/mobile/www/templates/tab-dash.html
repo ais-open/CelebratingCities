@@ -5,7 +5,7 @@
     	<div class="form-group vertical">
 	      <label for="startFrom">Start From:</label>
       	<div class="input-group">
-		      <input type="text" required name="startAt" size="40" ng-model="vm.search.startAt"/>
+		      <input type="text" name="startAt" size="40" ng-model="vm.search.startAt"/>
 		      <button type="button" class="geolocate" ng-click="vm.geolocate('start')"><span class="ion-icon ion-android-pin"></span></button>
 		    </div>
 	    </div>
@@ -13,7 +13,7 @@
 		<div class="form-group vertical">
 	      <label for="goingTo">Going To:</label>
       	<div class="input-group">
-		      <input type="text" required name="arriveAt" ng-model="vm.search.arriveAt"/>
+		      <input type="text" name="arriveAt" ng-model="vm.search.arriveAt"/>
 		      <button type="button" class="geolocate" ng-click="vm.geolocate('arrive')"><span class="ion-icon ion-android-pin"></span></button>
 		    </div>
 	     </div>
