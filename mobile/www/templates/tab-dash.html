@@ -1,35 +1,61 @@
 <ion-view view-title="Dashboard" ng-controller="DashCtrl as vm">
-  <ion-content class="padding">
-    <h2>Hubs</h2>
-    <form id="form-start" name="vm.searchForm" ng-submit="vm.search()">
-      <h3>Start from:</h3>
-      <input type="text" name="startAt" required size="40" ng-model="vm.startAt"/><button class="geolocate" ng-click="vm.geolocate('start')"><span class="ion-icon ion-android-pin"></span></button>
-      <br>
-      <h3>Going to:</h3>
-      <input type="text" name="arriveAt" required ng-model="vm.arriveAt"/><button class="geolocate" ng-click="vm.geolocate('arrive')"><span class="ion-icon ion-android-pin"></span></button>
-      <br>
-      <div>
-        <h3>Ride Date:</h3>
-        <input type="text" data-ng-model='vm.travelDate'></input>
+
+=======
+  <ion-content class="content-main">
+    <form ng-submit="vm.search()">
+    	<div class="form-group vertical">
+	      <label for="startFrom">Start From:</label>
+      	<div class="input-group">
+		      <input type="text" required name="startAt" size="40" ng-model="vm.search.startAt"/>
+		      <button class="geolocate" ng-click="vm.geolocate('start')"><span class="ion-icon ion-android-pin"></span></button>
+		    </div>
+	    </div>
+
+		<div class="form-group vertical">
+	      <label for="goingTo">Going To:</label>
+      	<div class="input-group">
+		      <input type="text" required name="arriveAt" ng-model="vm.search.arriveAt"/>
+		      <button class="geolocate" ng-click="vm.geolocate('arrive')"><span class="ion-icon ion-android-pin"></span></button>
+		    </div>
+	     </div>
+       <div class="form-group vertical">
+        <label for="startFrom">Schedule Ride: <input type="checkbox" name="recurring" size="40" ng-model="vm.scheduleRide"/></label>
       </div>
-      <div>
-        <h3>Earliest Time:</h3>
-        <input type="text" data-ng-model='vm.earliestArrival' data-lng-clockpicker data-lng-clockpicker-options='vm.timeOptions'></input>
+       <div class="form-group vertical">
+ 	      <label for="startFrom">Ride Date:</label>
+       	<div class="input-group">
+ 		      <input type="text" name="travelDate" size="40" ng-model="vm.search.travelDate"/>
+ 		    </div>
+ 	    </div>
+      <div class="form-group vertical">
+       <div class="input-group">
+         <select ng-model="vm.search.timingType" ng-init="vm.search.timingType = 'Arrive'">
+           <option ng-value="Arrive">Arrive</option>
+           <option ng-value="Leave">Leave</option>
+         </select>
+       </div>
+     </div>
+      <div class="form-group vertical">
+       <label for="startFrom">At The Earliest:</label>
+       <div class="input-group">
+         <input type="text" name="earliestArrival" size="40" ng-model="vm.search.earliestArrival"/>
+       </div>
+     </div>
+     <div class="form-group vertical">
+      <label for="startFrom">At The Latest:</label>
+      <div class="input-group">
+        <input type="text" name="latestArrival" size="40" ng-model="vm.search.latestArrival"/>
       </div>
-      <div>
-        <h3>Latest Time:</h3>
-        <input type="text" data-ng-model='vm.latestArrival' data-lng-clockpicker data-lng-clockpicker-options='vm.timeOptions'></input>
-      </div>
-      <div>
-        <select>
-          <option>Arrive</option>
-          <option>Leave</option>
-        </select>
-      </div>
-      <br>
-      <br>
-      <br>
-      <button type="submit" class="button button-balanced">Go</button>
+      <div class="form-group vertical">
+       <label for="startFrom">Recurring: <input type="checkbox" name="recurring" size="40" ng-model="vm.search.recurring"/></label>
+     </div>
+    </div>
+
+
+
+	     <div class="form-group vertical">
+	     	<button type="submit" class="button rh-button">Let's Go!</button>
+	     </div>
     </form>
   </ion-content>
 </ion-view>

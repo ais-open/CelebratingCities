@@ -10,8 +10,10 @@
           earliestTime: "",
           timingType: "",
           travelDate: "",
-          recurring: ""
+          recurring: "",
         };
+
+        vm.scheduleRide = false;
 
         vm.processing = false;
 
