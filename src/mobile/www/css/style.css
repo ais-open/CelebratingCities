@@ -175,7 +175,8 @@ button span.ion-icon {
 	margin-bottom: 20px;
 }
 
-.hub-list-item img {
+.hub-list-item img,
+.img-responsive {
 	width: 100%;
 	max-width: 100%;
 	height: auto;
