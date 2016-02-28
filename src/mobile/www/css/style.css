@@ -18,6 +18,13 @@
 	padding: 30px;
 }
 
+.content-lower {
+	padding: 15px 15px 5px 15px;
+    background: rgba(255,255,255,.2);
+    margin: 20px 20px 40px 20px;
+    color: white;
+}
+
 .page-title {
 	padding: 10px;
     background: #680148;

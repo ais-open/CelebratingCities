@@ -12,7 +12,7 @@ angular.module('starter.services', [])
     duration: 16,
     leaveTime: '7:06am',
     arriveTime: '7:22am',
-    endPoint: 'Marc Station West'
+    endPoint: 'West Balitmore (MARC)'
   },{
     id: 1,
     name: '7-11 in Lucille Park',
@@ -21,7 +21,7 @@ angular.module('starter.services', [])
     duration: 9,
     leaveTime: '7:20am',
     arriveTime: '7:29am',
-    endPoint: 'Marc Station West'
+    endPoint: 'West Balitmore (MARC)'
   },{
     id: 2,
     name: 'ALDI East Arlington',
@@ -30,7 +30,7 @@ angular.module('starter.services', [])
     duration: 12,
     leaveTime: '7:01am',
     arriveTime: '7:13am',
-    endPoint: 'Marc Station West'
+    endPoint: 'West Balitmore (MARC)'
   }, ];
 
   return {
